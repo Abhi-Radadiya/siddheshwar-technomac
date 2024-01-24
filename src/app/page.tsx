@@ -7,6 +7,7 @@ import Testimonials from "@/partials/Testimonials";
 import { Button, Feature } from "@/types";
 import Link from "next/link";
 import { FaCheck } from "react-icons/fa/index.js";
+import ProductManufacturing from "./components/home/ProductManufacturing";
 
 const Home = () => {
   const homepage = getListPage("homepage/_index.md");
@@ -21,18 +22,24 @@ const Home = () => {
     features: Feature[];
   } = frontmatter;
 
+  const aboutPoints = [
+    "Premier precision engineering for forged components",
+    "Tailored solutions for diverse industrial applications",
+    "Unmatched quality in every precision-machined component",
+    "Transparent partnerships, customer satisfaction at our core",
+    "State-of-the-art technology driving innovation in precision engineering",
+    "Tradition meets the future in our rich legacy of craftsmanship",
+  ];
+
   return (
     <>
       <SeoMeta />
-      
+
       <section className="section pt-14">
         <div className="container">
           <div className="row justify-center">
             <div className="mb-16 text-center lg:col-7">
-              <h1
-                className="mb-4"
-                dangerouslySetInnerHTML={markdownify(banner.title)}
-              />
+              <h1 className="mb-4">SIDDESHWAR TECHNOFORGE</h1>
               <p
                 className="mb-8"
                 dangerouslySetInnerHTML={markdownify(banner.content ?? "")}
@@ -59,59 +66,48 @@ const Home = () => {
         </div>
       </section>
 
-      {features.map((feature, index: number) => (
-        <section
-          key={index}
-          className={`section-sm ${index % 2 === 0 && "bg-gradient"}`}
-        >
-          <div className="container">
-            <div className="row items-center  justify-between">
-              <div
-                className={`mb:md-0 mb-6 md:col-5 ${
-                  index % 2 !== 0 && "md:order-2"
-                }`}
+      {/* {features.map((feature, index: number) => ( */}
+      <section className="section-sm bg-gradient">
+        <div className="container">
+          <div className="row items-center justify-between">
+            <div className="mb:md-0 mb-6 md:col-5">
+              <ImageFallback
+                // src={feature.image}
+                height={480}
+                width={520}
+                alt="Sideshaw"
+              />
+            </div>
+            <div className="md:col-7 lg:col-6">
+              <h2 className="mb-4 text-2xl">ABOUT SIDDHESHWAR TECHNO FORGE</h2>
+              <p className="mb-8 text-lg">
+                We stands at the forefront of precision engineering,
+                specializing in the manufacturing of forged and
+                precision-machined components. With a relentless commitment to
+                quality and innovation, we have established ourselves as a
+                trusted name in the industry.
+              </p>
+              <ul>
+                {aboutPoints.map((point, index) => (
+                  <li className="relative mb-4 pl-6" key={index}>
+                    <FaCheck className={"absolute left-0 top-1.5"} />
+                    <span dangerouslySetInnerHTML={markdownify(point)} />
+                  </li>
+                ))}
+              </ul>
+              <Link
+                className="btn btn-primary mt-5"
+                href={"feature.button.link"}
               >
-                <ImageFallback
-                  src={feature.image}
-                  height={480}
-                  width={520}
-                  alt={feature.title}
-                />
-              </div>
-              <div
-                className={`md:col-7 lg:col-6 ${
-                  index % 2 !== 0 && "md:order-1"
-                }`}
-              >
-                <h2
-                  className="mb-4"
-                  dangerouslySetInnerHTML={markdownify(feature.title)}
-                />
-                <p
-                  className="mb-8 text-lg"
-                  dangerouslySetInnerHTML={markdownify(feature.content)}
-                />
-                <ul>
-                  {feature.bulletpoints.map((bullet: string) => (
-                    <li className="relative mb-4 pl-6" key={bullet}>
-                      <FaCheck className={"absolute left-0 top-1.5"} />
-                      <span dangerouslySetInnerHTML={markdownify(bullet)} />
-                    </li>
-                  ))}
-                </ul>
-                {feature.button.enable && (
-                  <Link
-                    className="btn btn-primary mt-5"
-                    href={feature.button.link}
-                  >
-                    {feature.button.label}
-                  </Link>
-                )}
-              </div>
+                READ MORE
+              </Link>
             </div>
           </div>
-        </section>
-      ))}
+        </div>
+      </section>
+      {/* ))} */}
+
+      <ProductManufacturing />
 
       <Testimonials data={testimonial} />
       <CallToAction data={callToAction} />
