@@ -50,7 +50,7 @@ const Home = () => {
                   className="mx-auto"
                   width="800"
                   height="420"
-                  alt="banner image"
+                  alt="banner-image"
                   priority
                 />
               </div>
