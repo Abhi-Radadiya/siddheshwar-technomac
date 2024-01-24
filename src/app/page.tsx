@@ -65,7 +65,7 @@ const Home = () => {
           className={`section-sm ${index % 2 === 0 && "bg-gradient"}`}
         >
           <div className="container">
-            <div className="row items-center justify-between">
+            <div className="row items-center  justify-between">
               <div
                 className={`mb:md-0 mb-6 md:col-5 ${
                   index % 2 !== 0 && "md:order-2"
