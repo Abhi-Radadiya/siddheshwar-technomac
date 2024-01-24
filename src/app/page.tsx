@@ -24,6 +24,7 @@ const Home = () => {
   return (
     <>
       <SeoMeta />
+      
       <section className="section pt-14">
         <div className="container">
           <div className="row justify-center">
