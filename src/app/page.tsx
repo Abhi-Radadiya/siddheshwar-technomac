@@ -8,6 +8,9 @@ import { Button, Feature } from "@/types";
 import Link from "next/link";
 import { FaCheck } from "react-icons/fa/index.js";
 import ProductManufacturing from "./components/home/ProductManufacturing";
+import QualityProcess from "./components/home/QualityProcess";
+import Sector from "./components/home/Sector";
+import GlobalReach from "./components/home/GlobalReach";
 
 const Home = () => {
   const homepage = getListPage("homepage/_index.md");
@@ -109,7 +112,13 @@ const Home = () => {
 
       <ProductManufacturing />
 
-      <Testimonials data={testimonial} />
+      <QualityProcess />
+
+      <Sector />
+
+      <GlobalReach />
+
+      {/* <Testimonials data={testimonial} /> */}
       <CallToAction data={callToAction} />
     </>
   );

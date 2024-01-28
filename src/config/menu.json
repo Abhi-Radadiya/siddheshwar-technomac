@@ -6,24 +6,16 @@
     },
     {
       "name": "About",
-      "url": "/about"
-    },
-    {
-      "name": "Elements",
-      "url": "/elements"
-    },
-    {
-      "name": "Pages",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "Contact",
-          "url": "/contact"
+          "name": "Who We are",
+          "url": "/who-we-are"
         },
         {
-          "name": "Blog",
-          "url": "/blog"
+          "name": "Infrastructure",
+          "url": "/infrastructure"
         },
         {
           "name": "Authors",
@@ -42,7 +34,20 @@
           "url": "/404"
         }
       ]
+    },
+    {
+      "name": "Global Reach",
+      "url": "/global-reach"
+    },
+    {
+      "name": "Application",
+      "url": "/application"
+    },
+    {
+      "name": "Elements",
+      "url": "/elements"
     }
+   
   ],
   "footer": [
     {
