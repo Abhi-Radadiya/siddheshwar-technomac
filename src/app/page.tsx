@@ -11,6 +11,7 @@ import ProductManufacturing from "./components/home/ProductManufacturing";
 import QualityProcess from "./components/home/QualityProcess";
 import Sector from "./components/home/Sector";
 import GlobalReach from "./components/home/GlobalReach";
+import forging_home from "@/assets/forging_home.jpg";
 
 const Home = () => {
   const homepage = getListPage("homepage/_index.md");
@@ -43,15 +44,6 @@ const Home = () => {
           <div className="row justify-center">
             <div className="mb-16 text-center lg:col-7">
               <h1 className="mb-4">SIDDESHWAR TECHNOFORGE</h1>
-              <p
-                className="mb-8"
-                dangerouslySetInnerHTML={markdownify(banner.content ?? "")}
-              />
-              {banner.button!.enable && (
-                <Link className="btn btn-primary" href={banner.button!.link}>
-                  {banner.button!.label}
-                </Link>
-              )}
             </div>
             {banner.image && (
               <div className="col-12">
@@ -69,16 +61,16 @@ const Home = () => {
         </div>
       </section>
 
-      {/* {features.map((feature, index: number) => ( */}
       <section className="section-sm bg-gradient">
         <div className="container">
           <div className="row items-center justify-between">
             <div className="mb:md-0 mb-6 md:col-5">
               <ImageFallback
-                // src={feature.image}
+                src={forging_home}
                 height={480}
                 width={520}
-                alt="Sideshaw"
+                alt=""
+                className="rounded-tl-[50px] rounded-br-[50px]"
               />
             </div>
             <div className="md:col-7 lg:col-6">
@@ -98,17 +90,13 @@ const Home = () => {
                   </li>
                 ))}
               </ul>
-              <Link
-                className="btn btn-primary mt-5"
-                href={"feature.button.link"}
-              >
+              <Link className="btn btn-primary mt-5" href="/who-we-are">
                 READ MORE
               </Link>
             </div>
           </div>
         </div>
       </section>
-      {/* ))} */}
 
       <ProductManufacturing />
 
@@ -118,7 +106,6 @@ const Home = () => {
 
       <GlobalReach />
 
-      {/* <Testimonials data={testimonial} /> */}
       <CallToAction data={callToAction} />
     </>
   );

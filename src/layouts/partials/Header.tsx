@@ -1,13 +1,15 @@
 "use client";
 
-import Logo from "@/components/Logo";
+import logo from "@/assets/logo.png";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect } from "react";
 import { IoSearch } from "react-icons/io5/index.js";
+import logoText from "@/assets/logoText.png";
 
 //  child navigation link interface
 export interface IChildNavigationLink {
@@ -41,10 +43,14 @@ const Header = () => {
     >
       <nav className="navbar container">
         {/* logo */}
-        <div className="order-0">
-          <Logo />
+        <div className="flex flex-row gap-2">
+          <div className="order-0">
+            <Image src={logo} alt="" height={45} />
+          </div>
+          <div className="">
+            <Image src={logoText} alt="" height={45} />
+          </div>
         </div>
-        {/* navbar toggler */}
         <input id="nav-toggle" type="checkbox" className="hidden" />
         <label
           htmlFor="nav-toggle"
@@ -142,7 +148,7 @@ const Header = () => {
           )}
         </ul>
         <div className="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
-          {settings.search && (
+          {/* {settings.search && (
             <button
               className="border-border text-dark hover:text-primary dark:border-darkmode-border mr-5 inline-block border-r pr-5 text-xl dark:text-white dark:hover:text-darkmode-primary"
               aria-label="search"
@@ -150,8 +156,8 @@ const Header = () => {
             >
               <IoSearch />
             </button>
-          )}
-          <ThemeSwitcher className="mr-5" />
+          )} */}
+          {/* <ThemeSwitcher className="mr-5" /> */}
           {navigation_button.enable && (
             <Link
               className="btn btn-outline-primary btn-sm hidden lg:inline-block"

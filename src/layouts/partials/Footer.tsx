@@ -46,24 +46,38 @@ const Footer = () => {
             <div className="text-[#747474] text-[15px] font-[550] leading-7 tracking-wide mr-40">
               <div>
                 <pre className="text-white pb-[34px] font-sans uppercase font-normal tracking-wider underline underline-offset-[12px] decoration-red-500/90">
-                  dates &nbsp;
+                  QUICK LINK
                 </pre>
               </div>
-              <p>23 Dec 2021</p>
-              <p>30 May 2022</p>
-              <p>23 Dec 2021 to 31 May 2022</p>
+              <div className="flex flex-col gap-2">
+                <Link className="hover:tracking-wide" href="/who-we-are">
+                  WHO WE ARE
+                </Link>
+                <Link className="hover:tracking-wide" href="/infrastructure">
+                  INFRASTRUCTURE
+                </Link>
+                <Link className="hover:tracking-wide" href="/product">
+                  PRODUCTS
+                </Link>
+                <Link className="hover:tracking-wide" href="/global-reach">
+                  GLOBAL REACH
+                </Link>
+                <Link className="hover:tracking-wide" href="/application">
+                  APPLICATION
+                </Link>
+              </div>
             </div>
 
-            <div className="text-[#747474] text-[15px] font-[550] leading-7 tracking-wide">
-              <div>
+            {/* <div className="text-[#747474] text-[15px] font-[550] leading-7 tracking-wide"> */}
+            {/* <div>
                 <pre className="text-white pb-[34px] font-sans uppercase font-normal tracking-wider underline underline-offset-[12px] decoration-red-500/90">
                   dates &nbsp;
                 </pre>
               </div>
               <p>23 Dec 2021</p>
               <p>30 May 2022</p>
-              <p>23 Dec 2021 to 31 May 2022</p>
-            </div>
+              <p>23 Dec 2021 to 31 May 2022</p> */}
+            {/* </div> */}
           </div>
 
           <div className="text-[#797878] text-[15px] font-[550] leading-6 tracking-wide md:order-4 lg:">
@@ -73,8 +87,7 @@ const Footer = () => {
               </pre>
             </div>
 
-            <p className="space-x-3">
-              <i className="fa fa-home text-[17px]" aria-hidden="true"></i>
+            <p className="space-x-3 pb-3">
               <strong className="text-[#8b8b8b] text-[15px] tracking-wide">
                 SIDDHESHWAR TECHNOFORGE PVT LTD
               </strong>
@@ -82,42 +95,26 @@ const Footer = () => {
 
             <div className="leading-7">
               <p>
-                NH-70 Chandigarh-Ludhiana Highway, <br />
-                Mohali, Punjab (INDIA) <br />
-                General Helpline No:+91 987-6543-210
+                Survey No.120/1, Plot No.4, B/H. Ishwar Weighbridge,
+                <br />
+                Padaval Veraval Road,
+                <br />
+                Padvala, Tal. Kotdasangani, RAJKOT - 360 024
               </p>
             </div>
 
             <div className="leading-7 mt-4 text-[15px] font-[500]">
               <p className="space-x-3 hover:text-[#cacaca]">
-                <i className="fa fa-phone text-[17px]" aria-hidden="true"></i>
-                <a href="#"> 1800 1800 88800</a>
-              </p>
-              <p className="space-x-3 hover:text-[#cacaca]">
-                <i className="fa fa-phone text-[17px]" aria-hidden="true"></i>
                 <a href="#">
-                  9946948000S (
+                  +91 81400 38097 (
                   <span className="text-[13px] font-[500]">
                     General Enquiry
                   </span>
                   )
                 </a>
               </p>
+
               <p className="space-x-3 hover:text-[#cacaca]">
-                <i className="fa fa-phone text-[17px]" aria-hidden="true"></i>
-                <a href="#">
-                  994694700&nbsp;(
-                  <span className="text-[13px] font-[500]">
-                    Technical Support: CUCET
-                  </span>
-                  )
-                </a>
-              </p>
-              <p className="space-x-3 hover:text-[#cacaca]">
-                <i
-                  className="fa fa-envelope text-[16px]"
-                  aria-hidden="true"
-                ></i>
                 <a href="#"> admin@Company.in</a>
               </p>
             </div>

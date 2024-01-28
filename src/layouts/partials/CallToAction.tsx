@@ -27,21 +27,18 @@ const CallToAction = ({ data }: { data: PageData }) => {
               </div>
               <div className="md:col-7 md:order-1">
                 <h2 className="mb-2">Global Excellence</h2>
-                <p className="mb-6">
-                  Siddeshwar Technoforge extends its influence globally, leaving
-                  an indelible mark on industries worldwide. Our commitment to
-                  delivering top-tier forging technology transcends borders,
-                  fostering partnerships and driving innovation across
-                  continents. With a reputation for unparalleled quality and
-                  reliability, Siddeshwar Technoforge is at the forefront of
-                  forging a global legacy of excellence.
+                <p className="text-justify leading-9 tracking-wide mb-6">
+                  We extends its influence globally, leaving an indelible mark
+                  on industries worldwide. Our commitment to delivering top-tier
+                  forging technology transcends borders, fostering partnerships
+                  and driving innovation across continents. With a reputation
+                  for unparalleled quality and reliability, Siddeshwar
+                  Technoforge is at the forefront of forging a global legacy of
+                  excellence.
                 </p>
                 {data.frontmatter.button.enable && (
-                  <Link
-                    className="btn btn-primary"
-                    href={data.frontmatter.button.link}
-                  >
-                    {data.frontmatter.button.label}
+                  <Link className="btn btn-primary" href="/global-reach">
+                    Know more
                   </Link>
                 )}
               </div>

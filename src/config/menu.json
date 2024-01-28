@@ -18,21 +18,9 @@
           "url": "/infrastructure"
         },
         {
-          "name": "Authors",
-          "url": "/authors"
-        },
-        {
-          "name": "Categories",
-          "url": "/categories"
-        },
-        {
-          "name": "Tags",
-          "url": "/tags"
-        },
-        {
-          "name": "404 Page",
-          "url": "/404"
-        }
+          "name": "Product",
+          "url": "/product"
+        }      
       ]
     },
     {
@@ -42,12 +30,7 @@
     {
       "name": "Application",
       "url": "/application"
-    },
-    {
-      "name": "Elements",
-      "url": "/elements"
-    }
-   
+    }   
   ],
   "footer": [
     {
