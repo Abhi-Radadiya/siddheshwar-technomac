@@ -157,7 +157,7 @@ const Header = () => {
               className="btn btn-outline-primary btn-sm hidden lg:inline-block"
               href="/contact"
             >
-              Let's connect
+              {`Let's connect`}
             </Link>
           )}
         </div>

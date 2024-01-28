@@ -24,28 +24,25 @@ export default function QualityProcess() {
 
         <div className="">
           <div className="flex flex-row gap-8 mb-5">
-            <Card title="Quality checking" />
-            <Card title="Heat treatment" />
+            <div className="w-[175px] h-[120px] rounded-br-[20%] rounded-tl-[20%] border border-neutral-500">
+              <span>Quality checking</span>
+            </div>
+            <div className="w-[175px] h-[120px] rounded-br-[20%] rounded-tl-[20%] border border-neutral-500">
+              <span>Heat treatment</span>
+            </div>
           </div>
 
           <div className="flex flex-row gap-8">
-            <Card title="Shot blasting" />
-            <Card title="Fettling shop" />
+            <div className="w-[175px] h-[120px] rounded-br-[20%] rounded-tl-[20%] border border-neutral-500">
+              <span>Shot blasting</span>
+            </div>
+
+            <div className="w-[175px] h-[120px] rounded-br-[20%] rounded-tl-[20%] border border-neutral-500">
+              <span>Fettling shop</span>
+            </div>
           </div>
         </div>
       </div>
     </>
   );
 }
-
-const Card = (props) => {
-  const { title, icon } = props;
-
-  return (
-    <>
-      <div className="w-[175px] h-[120px] rounded-br-[20%] rounded-tl-[20%] border border-neutral-500">
-        <span>{title}</span>
-      </div>
-    </>
-  );
-};
