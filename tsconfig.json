@@ -29,6 +29,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/home/ProductManufacturing.js","typings"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/home/ProductManufacturing.js","typings", "src/app/components/home/SliderSection.js"],
   "exclude": ["node_modules"]
 }

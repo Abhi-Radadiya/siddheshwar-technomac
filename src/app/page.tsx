@@ -12,7 +12,7 @@ import QualityProcess from "./components/home/QualityProcess";
 import Sector from "./components/home/Sector";
 import GlobalReach from "./components/home/GlobalReach";
 import forging_home from "@/assets/forging_home.jpg";
-import SliderSection from "./components/home/SliderSection";
+import SliderSection from "./components/home/SliderSection.js";
 
 const Home = () => {
   const homepage = getListPage("homepage/_index.md");
