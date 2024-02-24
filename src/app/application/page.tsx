@@ -28,41 +28,24 @@ import PageHeader from "@/partials/PageHeader";
 
 export default function Application() {
   const sectionArray = [
-    { icon: aerospace, label: "Aerospace" },
-    { icon: agriculture, label: "Agriculture" },
-    { icon: airCompressor, label: "Air Compressor" },
-    { icon: automobile, label: "Automobile" },
-    { icon: automotive, label: "Automotive" },
-    { icon: bearing, label: "Bearing" },
-    { icon: construction, label: "Construction" },
-    { icon: defence, label: "Defence" },
-    { icon: fertilizer, label: "Fertilizer" },
-    { icon: fireFighting, label: "Fire Fighting" },
-    { icon: foodProcessing, label: "Food Processing" },
-    { icon: gearTransmission, label: "Gear Transmission" },
-    { icon: industrial, label: "Industrial" },
-    { icon: marine, label: "Marine" },
-    { icon: nuclearPower, label: "Nuclear Power" },
-    { icon: oilField, label: "Oil Field" },
-    { icon: pharmaceutical, label: "Pharmaceutical" },
-    { icon: pipeFittings, label: "Pipe Fittings" },
-    { icon: powerEnergy, label: "Power Energy" },
-    { icon: pumpValve, label: "Pump Valve" },
-    { icon: railway, label: "Railway" },
-    { icon: ropeway, label: "Ropeway" },
-    { icon: textile, label: "Textile" },
-    { icon: windmill, label: "Windmill" },
+    { icon: agriculture, label: "Agriculture" }, //xxxxxxx
+    { icon: automobile, label: "Automobile" }, //xxxxx
+    { icon: oilField, label: "Oil Field" }, //xxxxxx
+    { icon: pipeFittings, label: "Pipe Fittings" }, //xxxxx
+    { icon: pumpValve, label: "Pump Valve" }, //xxx
+    { icon: railway, label: "Railway" }, //xxx
   ];
 
   return (
     <>
       <PageHeader title="Application" />
-      <h2 className="text-neutral-700 font-normal mx-auto text-center justify-center mt-24">
+      <h2 className="text-neutral-700 font-normal mx-auto text-center justify-center mt-24 mdN:mt-3">
         Industry We Serve
       </h2>
       <div className="text-center w-full mx-auto justify-center">
         <div className="h-1.5 w-[200px] bg-black flex mx-auto mt-2 mb-10" />
-        <p className="max-w-[55%] text-justify mx-auto mb-4 tracking-wide leading-9">
+
+        <p className="max-w-[55%] text-justify mx-auto mb-4 tracking-wide leading-9 mdN:max-w-[90%]">
           Our product application harnesses the power of forging technology to
           revolutionize various industries. From automotive components that
           ensure safety and performance to aerospace parts that withstand
@@ -82,6 +65,7 @@ export default function Application() {
           >
             <div className="mt-5">
               <Image src={el.icon} alt="imgName" width={200} />
+
               <div className="mt-2.5">
                 <p className="text-center">{el.label}</p>
               </div>

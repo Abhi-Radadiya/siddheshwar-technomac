@@ -42,10 +42,28 @@ export default function ProductManufacturing() {
 
         <div className="bg-[#000] h-[5px] w-[100px] flex justify-center mx-auto mb-14" />
 
-        <div className="flex flex-row mx-auto w-full gap-12 justify-center pb-40">
+        {/* <div className="flex justify-between mx-auto w-full max-w-[80%] pb-40 items-center">
           {product.map((el, index) => (
             <Link
               className="transform rounded-br-[50px] rounded-tl-[50px] h-40 w-40 sm:h-[20rem] p-3 sm:w-64 bg-white shadow-xl transition duration-300 hover:scale-110 cursor-pointer"
+              key={index}
+              href="/product"
+            >
+              <Image src={el.image} alt="" className="mt-1" />
+
+              <div className="justify-center items-center mt-5">
+                <span>{el.label}</span>
+
+                <p className="text-gray-500 mt-2">{el.description}</p>
+              </div>
+            </Link>
+          ))}
+        </div> */}
+
+        <div className="mx-auto w-full max-w-[80%] xlN:max-w-[90%] pb-40 items-center flex justify-between lgN:grid lgN:grid-cols-2 lgN:gap-6 mdN:grid-cols-1 ">
+          {product.map((el, index) => (
+            <Link
+              className="transform rounded-br-[50px] rounded-tl-[50px] h-[20rem] p-3 w-64 bg-white shadow-xl transition duration-300 hover:scale-110 cursor-pointer mx-5 justify-center lgN:mx-auto"
               key={index}
               href="/product"
             >

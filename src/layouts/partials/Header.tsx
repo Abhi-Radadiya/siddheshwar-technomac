@@ -43,14 +43,14 @@ const Header = () => {
     >
       <nav className="navbar container">
         {/* logo */}
-        <div className="flex flex-row gap-2">
+        <Link className="flex flex-row gap-2" href="/home">
           <div className="order-0">
             <Image src={logo} alt="" height={45} />
           </div>
           <div className="">
             <Image src={logoText} alt="" height={45} />
           </div>
-        </div>
+        </Link>
         <input id="nav-toggle" type="checkbox" className="hidden" />
         <label
           htmlFor="nav-toggle"

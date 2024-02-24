@@ -40,10 +40,10 @@ const Footer = () => {
         </div>
       </footer> */}
 
-      <div className="bg-black p-4 items-center">
-        <div className="flex flex-row justify-between w-full max-w-[80%] mx-auto mb-36 pt-10">
+      <div className="bg-black p-4 items-center lgN:px-10">
+        <div className="flex flex-row justify-between w-full max-w-[80%] mx-auto mb-36 pt-10 mdN:max-w-full mdN:block mdN:mb-10">
           <div className="flex flex-row w-full max-w-[60%]">
-            <div className="text-[#747474] text-[15px] font-[550] leading-7 tracking-wide mr-40">
+            <div className="text-[#747474] text-[15px] font-[550] leading-7 tracking-wide mr-40 mdN:mb-12">
               <div>
                 <pre className="text-white pb-[34px] font-sans uppercase font-normal tracking-wider underline underline-offset-[12px] decoration-red-500/90">
                   QUICK LINK
@@ -115,7 +115,7 @@ const Footer = () => {
               </p>
 
               <p className="space-x-3 hover:text-[#cacaca]">
-                <a href="#"> admin@Company.in</a>
+                <a href="#"> info@siddheshwartechnoforge.com</a>
               </p>
             </div>
           </div>
@@ -124,7 +124,7 @@ const Footer = () => {
           <p>&nbsp;</p>
           <p>&nbsp;</p>
         </div>
-        <div className="flex justify-center mb-4 md:mb-1 text-[#afafaf] text-center text-xl space-x-3">
+        {/* <div className="flex justify-center mb-4 md:mb-1 text-[#afafaf] text-center text-xl space-x-3">
           <p>
             <a
               href="#"
@@ -181,7 +181,7 @@ const Footer = () => {
               <i className="fa fa-telegram"></i>
             </a>
           </p>
-        </div>
+        </div> */}
       </div>
     </>
   );

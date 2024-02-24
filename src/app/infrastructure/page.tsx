@@ -1,25 +1,26 @@
 import PageHeader from "@/partials/PageHeader";
 import Image from "next/image";
 import React from "react";
-import forging from "@/assets/forging.png";
-import tooling from "@/assets/tooling.png";
+import forging from "@/assets/hammer.jpg";
+import laboratory from "@/assets/laboratory.jpg";
 import vmc from "@/assets/vmc.png";
 import furnace from "@/assets/furnace.jpg";
-import mechanic from "@/assets/mechanic-shop.jpg";
+import mechanic from "@/assets/machinig.jpg";
+import diaImage from "@/assets/industrialDie.jpg";
 
 export default function page() {
   return (
     <>
       <section className="">
         <PageHeader title="Infrastructure" />
-        <div className="text-center w-full mx-auto justify-center mb-4 pt-24 pb-10 max-w-[80%]">
+        <div className="text-center w-full mx-auto justify-center mb-4 pt-24 pb-10 max-w-[80%] mdN:max-w-full">
           <h2 className="text-neutral-700 font-normal">
             Infrastructure Excellence Hub
           </h2>
 
           <div className="h-1.5 w-[300px] bg-black flex mx-auto mt-2 mb-10" />
 
-          <p className="max-w-[55%] text-justify mx-auto tracking-wide leading-9 mb-12">
+          <p className="max-w-[55%] text-justify mx-auto tracking-wide leading-9 mb-12 lgN:max-w-[85%]">
             At Siddheshwar Technoforge, our comprehensive infrastructure
             includes a cutting-edge laboratory, advanced tooling shop,
             state-of-the-art forging facility, and a precision machine shop.
@@ -27,17 +28,21 @@ export default function page() {
             quality throughout our manufacturing journey.
           </p>
         </div>
-        <div className="bg-theme-light py-16 dark:bg-darkmode-theme-light xl:p-20 mx-auto flex">
+        <div className="bg-theme-light py-16 dark:bg-darkmode-theme-light xl:p-20 mx-auto flex mdN:pb-3 mdN:pt-6">
           <div className="max-w-[80%] flex justify-center mx-auto">
-            <div className="items-center flex flex-row justify-between mx-auto">
+            <div className="items-center flex flex-row justify-between mx-auto mdN:flex-col">
               <div className="mb-10">
-                <Image src={forging} alt="" width={200} />
+                <Image
+                  src={forging}
+                  alt=""
+                  className="rounded-tr-[40px] rounded-bl-[40px] mr-10 -ml-10 mdN:mx-0"
+                />
               </div>
 
               <div className="md:col-7 md:order-1 text-left">
-                <h2 className="mb-2">
+                <h2 className="mb-2 flex flex-col">
                   Friction Drop
-                  <span className="ml-6 font-normal text-[30px]">
+                  <span className="font-normal text-[30px] mdN:text-2xl">
                     [Hammer - 1.5 MT, 1 MT]
                   </span>
                 </h2>
@@ -70,31 +75,24 @@ export default function page() {
               </div>
             </div>
           </div>
-
-          {/* Oil Fired Furnace */}
-
-          {/* <Image
-            src={siddeshwar_profile}
-            alt="siddeshwar_profile"
-            className="rounded-tr-[12%] rounded-bl-[12%]"
-          /> */}
         </div>
-        <div className="bg-theme-light py-16 dark:bg-darkmode-theme-light xl:p-20 mx-auto flex">
+
+        <div className="bg-theme-light py-16 dark:bg-darkmode-theme-light xl:p-20 mx-auto flex mdN:pb-3">
           <div className="max-w-[80%] flex justify-center mx-auto">
-            <div className="items-center flex flex-row-reverse justify-between mx-auto">
+            <div className="items-center flex flex-row-reverse justify-between mx-auto mdN:flex mdN:flex-col">
               <div className="mb-10">
                 <Image
                   src={furnace}
                   alt=""
                   width={350}
-                  className="rounded-tr-[40px] rounded-bl-[40px]"
+                  className="rounded-tr-[40px] rounded-bl-[40px] mx-10 mdN:mx-0"
                 />
               </div>
 
               <div className="md:col-7 md:order-1 text-left">
-                <h2 className="mb-2">
+                <h2 className="mb-2 flex flex-col">
                   Oil Fired Furnace
-                  <span className="ml-6 font-normal text-[30px]">
+                  <span className="font-normal text-[30px] mdN:text-2xl">
                     [Loading Capacity: 5 MT]
                   </span>
                 </h2>
@@ -124,21 +122,20 @@ export default function page() {
             </div>
           </div>
         </div>
-        <div className="bg-theme-light py-16 dark:bg-darkmode-theme-light xl:p-20 mx-auto flex">
+        <div className="bg-theme-light py-16 dark:bg-darkmode-theme-light xl:p-20 mx-auto flex mdN:py-3">
           <div className="max-w-[80%] flex justify-center mx-auto">
-            <div className="items-center flex flex-row justify-between mx-auto">
+            <div className="items-center flex flex-row justify-between mx-auto mdN:flex-col">
               <div className="mb-5">
                 <Image
-                  src={tooling}
+                  src={laboratory}
                   alt=""
-                  width={400}
-                  className="rounded-tr-[40px] rounded-bl-[40px]"
+                  className="rounded-tr-[40px] rounded-bl-[40px] mr-10 -ml-10 mdN:-ml-0 mdN:mr-0"
                 />
               </div>
 
               <div className="md:col-7 md:order-1 text-left">
                 <h2 className="mb-2">Laboratory</h2>
-                <div className="h-1.5 w-[170px] bg-black mt-2 mb-10" />
+                <div className="h-1.5 w-[170px] bg-black mt-2 mb-10 mdN:mb-2" />
                 <br />
 
                 <p className="mb-6 text-justify">
@@ -172,10 +169,11 @@ export default function page() {
             </div>
           </div>
         </div>
+
         <div className="bg-theme-light py-16 dark:bg-darkmode-theme-light xl:p-20 mx-auto flex">
           <div className="max-w-[80%] flex justify-center mx-auto">
-            <div className="items-center flex flex-row-reverse justify-between mx-auto">
-              <div className="mb-5">
+            <div className="items-center flex flex-row-reverse justify-between mx-auto mdN:flex-col">
+              <div className="mb-5 ml-12">
                 <Image src={vmc} alt="" width={400} />
               </div>
 
@@ -213,21 +211,22 @@ export default function page() {
             </div>
           </div>
         </div>
-        <div className="bg-theme-light py-16 dark:bg-darkmode-theme-light xl:p-20 mx-auto flex">
+
+        <div className="bg-theme-light py-16 dark:bg-darkmode-theme-light xl:p-20 mx-auto flex mdN:py-3">
           <div className="max-w-[80%] flex justify-center mx-auto">
-            <div className="items-center flex flex-row justify-between mx-auto">
+            <div className="items-center flex flex-row justify-between mx-auto mdN:flex-col">
               <div className="mb-5">
                 <Image
                   src={mechanic}
                   alt=""
                   width={400}
-                  className="rounded-tr-[40px] rounded-bl-[40px]"
+                  className="rounded-tr-[40px] rounded-bl-[40px] -ml-10 mr-10 mdN:-ml-0 mdN:mr-0"
                 />
               </div>
 
               <div className="md:col-7 md:order-1 text-left">
                 <h2 className="mb-2">Mechanic Shop</h2>
-                <div className="h-1.5 w-[170px] bg-black mt-2 mb-10" />
+                <div className="h-1.5 w-[170px] bg-black mt-2 mb-10 mdN:mb-3" />
                 <br />
 
                 <p className="mb-6 text-justify">
@@ -254,6 +253,42 @@ export default function page() {
                   testament to our commitment to advanced manufacturing,
                   providing components that consistently meet the highest
                   industry standards.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-theme-light py-16 dark:bg-darkmode-theme-light xl:p-20 mx-auto flex">
+          <div className="max-w-[80%] flex justify-center mx-auto">
+            <div className="items-center flex flex-row-reverse justify-between mx-auto mdN:flex-col">
+              <div className="mb-5 ml-12">
+                <Image
+                  src={diaImage}
+                  alt=""
+                  width={400}
+                  className="rounded-tr-[40px] rounded-bl-[40px] mx-10 mdN:mx-0"
+                />
+              </div>
+
+              <div className="md:col-7 md:order-1 text-left">
+                <h2 className="mb-2">Die Shop</h2>
+                <div className="h-1.5 w-[170px] bg-black mt-2 mb-10" />
+                <p className="mb-6 text-justify">
+                  Our die creation unit is staffed by a team of highly skilled
+                  engineers and craftsmen who possess a wealth of experience in
+                  tooling and die-making. Leveraging cutting-edge software and
+                  manufacturing techniques, they meticulously craft dies that
+                  meet the exacting specifications required for forging a wide
+                  range of materials.
+                </p>
+
+                <p className="text-justify mb-6">
+                  Our dedication to quality extends beyond the design phase. We
+                  employ the latest machining technologies and premium-grade
+                  materials to manufacture dies that can withstand the rigors of
+                  high-volume production while maintaining tight tolerances and
+                  surface finish requirements.
                 </p>
               </div>
             </div>

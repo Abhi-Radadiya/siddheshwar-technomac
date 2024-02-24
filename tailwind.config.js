@@ -38,6 +38,11 @@ module.exports = {
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
+      xlN: { max: "1280px" },
+      lgN: { max: "1023px" },
+      mdN: { max: "767px" },
+      smallTabM: { max: "500px" },
+      mobileN: { max: "374px" },
     },
     container: {
       center: true,

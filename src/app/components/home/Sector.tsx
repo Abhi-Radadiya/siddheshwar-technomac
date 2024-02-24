@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import serve1 from "@/assets/serve1.png";
 import serve2 from "@/assets/serve2.png";
@@ -19,8 +20,14 @@ export default function Sector() {
 
   return (
     <>
-      <div className="bg-gradient pt-10">
-        <div className="mx-auto justify-center max-w-[80%] mb-12">
+      {/* <header
+        className={`flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg_image`}
+      >
+        
+      </header> */}
+
+      <div className="bg-gradient pt-10 pb-12">
+        <div className="mx-auto justify-center max-w-[80%]">
           <h2 className="mb-2.5">Where we deliver excellence</h2>
 
           <div className="h-1.5 bg-black w-[150px] mb-4" />
@@ -36,17 +43,13 @@ export default function Sector() {
             success in every sector we serve.
           </p>
 
-          <div className="flex flex-row w-full justify-between mt-6">
+          <div className="lgN:grid h-full grid-cols-3 place-items-center gap-6 flex flex-row w-full justify-between mdN:grid-cols-2 mobileN:flex-col mobileN:justify-center mobileN:mx-auto">
             {product.map((el, index) => (
-              <div className="" key={index}>
-                <div className="transform rounded-br-[50px] rounded-tl-[50px] h-36 w-36 bg-white shadow-xl transition duration-300 hover:rotate-12">
-                  <div className="flex h-full justify-center items-center">
-                    <span className="font-bold text-gray-500">
-                      <Image src={el.image} alt="" />
-                    </span>
-                  </div>
+              <div key={index} className="">
+                <div className="transform rounded-br-[50px] rounded-tl-[50px] h-[120px] w-[120px] bg-white shadow-xl transition duration-300 hover:rotate-12">
+                  <Image src={el.image} alt="" />
                 </div>
-                <div className="mt-5 w-full text-center">
+                <div className="mt-5 w-full text-center max-w-[120px]">
                   <span className="uppercase">{el.label}</span>
                 </div>
               </div>

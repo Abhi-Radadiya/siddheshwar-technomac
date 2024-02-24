@@ -12,6 +12,7 @@ import QualityProcess from "./components/home/QualityProcess";
 import Sector from "./components/home/Sector";
 import GlobalReach from "./components/home/GlobalReach";
 import forging_home from "@/assets/forging_home.jpg";
+import SliderSection from "./components/home/SliderSection";
 
 const Home = () => {
   const homepage = getListPage("homepage/_index.md");
@@ -35,30 +36,27 @@ const Home = () => {
     "Tradition meets the future in our rich legacy of craftsmanship",
   ];
 
+  const content = [
+    { title: "dfhb hed", description: "vnjr jn  j" },
+    { title: "dskj kjd  hed", description: "vnjr jn  j" },
+    { title: "dfhb vsjn ", description: "vn jsj jr jn  j" },
+  ];
+
   return (
     <>
       <SeoMeta />
 
-      <section className="section pt-14">
-        <div className="container">
-          <div className="row justify-center">
-            <div className="mb-16 text-center lg:col-7">
-              <h1 className="mb-4">SIDDESHWAR TECHNOFORGE</h1>
+      <SliderSection />
+
+      <section>
+        {/* <Slider>
+          {content.map((article, index) => (
+            <div key={index}>
+              <h2>{article.title}</h2>
+              <div>{article.description}</div>
             </div>
-            {banner.image && (
-              <div className="col-12">
-                <ImageFallback
-                  src={banner.image}
-                  className="mx-auto"
-                  width="800"
-                  height="420"
-                  alt="banner-image"
-                  priority
-                />
-              </div>
-            )}
-          </div>
-        </div>
+          ))}
+        </Slider> */}
       </section>
 
       <section className="section-sm bg-gradient">

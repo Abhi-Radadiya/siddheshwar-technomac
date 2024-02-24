@@ -8,6 +8,7 @@ import Image from "next/image";
 import mission from "@/assets/mission.png";
 import vision from "@/assets/vision.png";
 import values from "@/assets/value.png";
+import phylisophy from "@/assets/philosophy.png";
 import "./style.css";
 
 const page = () => {
@@ -90,7 +91,7 @@ const page = () => {
 
           <div className="h-1.5 w-[200px] bg-black flex mx-auto mt-2 mb-10" />
 
-          <p className="max-w-[55%] text-justify mx-auto tracking-wide leading-9 mb-12">
+          <p className="max-w-[55%] text-justify mx-auto tracking-wide leading-9 mb-12 mdN:max-w-[90%]">
             We take pride in our commitment to excellence and innovation. With a
             rich company profile built on a foundation of integrity and quality,
             we strive to deliver cutting-edge solutions that meet and exceed the
@@ -110,8 +111,8 @@ const page = () => {
           <div className="row items-center justify-between">
             <div className="mb-10 md:col-5 lg:col-4 md:order-2 md:mb-0">
               <ImageFallback
-                className="w-full"
-                src={data.frontmatter.image}
+                className="rounded-tr-[40px] rounded-bl-[40px] w-full"
+                src={phylisophy}
                 width={392}
                 height={390}
                 alt="cta-image"
@@ -123,17 +124,17 @@ const page = () => {
               <div className="h-1.5 w-[150px] bg-black mt-2 mb-10" />
 
               <p className="mb-6 text-justify leading-9 tracking-wide">
-                Established in [Year of Establishment], Siddheshwar Technoforge
-                stands as a pioneering force in the forging industry. Founded by
-                [Founders Name], our ultramodern facility, equipped with
-                cutting-edge machinery and a comprehensive Testing Laboratory
-                staffed by skilled technicians, reflects our unwavering
-                commitment to excellence. Catering to diverse sectors, including
-                Agriculture, Pipe Fittings, Flanges, Railway, Refinery, and
-                Automobiles. We not only prioritize our advanced manufacturing
-                processes but, more significantly, take immense pride in the
-                dedication and expertise of our valued employees, who form the
-                backbone of our success.
+                Established in 2001, Siddheshwar Technoforge stands as a
+                pioneering force in the forging industry. Founded by Er. Uttam
+                Sorthia, our ultramodern facility, equipped with cutting-edge
+                machinery and a comprehensive Testing Laboratory staffed by
+                skilled technicians, reflects our unwavering commitment to
+                excellence. Catering to diverse sectors, including Agriculture,
+                Pipe Fittings, Flanges, Railway, Refinery, and Automobiles. We
+                not only prioritize our advanced manufacturing processes but,
+                more significantly, take immense pride in the dedication and
+                expertise of our valued employees, who form the backbone of our
+                success.
               </p>
             </div>
           </div>
@@ -141,10 +142,10 @@ const page = () => {
       </section>
 
       <section className="max-w-[80%] mx-auto">
-        <div className="flex flex-row mx-auto w-full gap-12 pb-5 justify-between">
+        <div className="mx-auto w-full gap-12 pb-5 justify-between grid grid-cols-3 place-items-center xlN:grid-cols-2 mdN:grid-cols-1">
           {product.map((el, index) => (
             <div
-              className="transform rounded-br-[50px] rounded-tl-[50px] h-40 w-60 sm:h-[270px] sm:w-80 bg-white shadow-xl transition duration-300 hover:scale-110 p-5"
+              className="transform rounded-br-[50px] rounded-tl-[50px] w-60 h-[320px] sm:w-80 bg-white shadow-xl transition duration-300 hover:scale-110 p-5"
               key={index}
             >
               <Image src={el.image} alt="" width={75} className="mt-5" />
@@ -168,11 +169,11 @@ const page = () => {
           <div className="h-1.5 w-[200px] bg-black flex mx-auto mt-2 mb-10" />
         </div>
 
-        <div className="max-w-[80%] mx-auto">
-          <div className="ag-courses_box w-full gap-x-24 gap-y-5 grid grid-cols-3">
+        <div className="max-w-[80%] mx-auto lgN:max-w-[90%]">
+          <div className="ag-courses_box w-full gap-y-5 grid grid-cols-3 lgN:grid-cols-2 mdN:grid-cols-1">
             {keyStrength.map((el, index) => (
               <div
-                className="ag-courses_item my-3 shadow-2xl border-b-2 border-l-2 border-neutral-300 rounded-tr-[28px] rounded-bl-[28px]"
+                className="ag-courses_item my-3 shadow-2xl border-b-2 border-l-2 border-neutral-300 rounded-tr-[28px] rounded-bl-[28px] h-[260px] mx-5"
                 key={index}
               >
                 <div className="ag-courses-item_link ">

@@ -2,6 +2,7 @@ import ImageFallback from "@/helpers/ImageFallback";
 import { markdownify } from "@/lib/utils/textConverter";
 import { Call_to_action } from "@/types";
 import Link from "next/link";
+import ship from "../../assets/globalShip.jpg";
 
 interface PageData {
   notFound?: boolean;
@@ -19,7 +20,7 @@ const CallToAction = ({ data }: { data: PageData }) => {
               <div className="mb-10 md:col-5 lg:col-4 md:order-2 md:mb-0">
                 <ImageFallback
                   className="w-full"
-                  src={data.frontmatter.image}
+                  src={ship}
                   width={392}
                   height={390}
                   alt="cta-image"
