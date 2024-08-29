@@ -9,6 +9,7 @@ import Image from "next/image";
 import slideForging from "@/assets/slider_forging.jpg";
 import precisionMachining from "@/assets/slider_precision.jpg";
 import innovative from "@/assets/slider_inovative.jpg";
+import closeDieForging from "@/assets/closed-die-forging.jpg";
 
 export default function Page() {
   const content = [
@@ -17,6 +18,7 @@ export default function Page() {
       description:
         "Discover our legacy of precision and innovation in the world of forging.",
       link: "/about-us",
+      image: closeDieForging,
     },
     {
       title: "Uncover the brilliance of forging",
