@@ -120,9 +120,17 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="divide-y divide-[#747474] contrast-200 mt-3 mb-3 md:-mt-4 md:-mb-2 lg:-mt-16 xl:-mt-24">
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
+        <div className="border-t border-[#747474] contrast-200 mt-3 mb-3 md:-mt-4 md:-mb-2 lg:-mt-16 xl:-mt-24">
+          <p className="hidden">&nbsp;</p>
+          <p className="text-[#797878] py-2 justify-center mx-auto w-fit">
+            DEVELOPED BY :{" "}
+            <a href="https://www.ekantiktechnologies.com/" target="_blank">
+              Ekantik Technologies
+            </a>
+            © COPYRIGHTS 2024 :: SIDDHESHWAR TECHNO FORGE :: ALL RIGHTS
+            RESERVED.
+          </p>
+          {/* <p>&nbsp;</p> */}
         </div>
         {/* <div className="flex justify-center mb-4 md:mb-1 text-[#afafaf] text-center text-xl space-x-3">
           <p>
