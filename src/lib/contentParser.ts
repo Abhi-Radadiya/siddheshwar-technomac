@@ -64,9 +64,11 @@ export const getSinglePage = (folder: string) => {
   const publishedPages = singlePages.filter(
     (page) => !page.frontmatter.draft && page,
   );
-  const filterByDate = publishedPages.filter(
-    (page) => new Date(page.frontmatter.date || new Date()) <= new Date(),
-  );
+  const filterByDate = publishedPages.filter((page) => {
+    // Skip date filtering for pages without a date (non-dated pages)
+    if (!page.frontmatter.date) return true;
+    return new Date(page.frontmatter.date) <= new Date();
+  });
 
   return filterByDate;
 };

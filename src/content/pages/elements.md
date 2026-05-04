@@ -3,7 +3,6 @@ title: "Elements"
 meta_title: ""
 description: "this is meta description"
 draft: false
-date: 2024-01-01
 ---
 
 # Heading 1
