@@ -30,7 +30,26 @@
     {
       "name": "Application",
       "url": "/application"
-    }   
+    },
+    {
+      "name": "Investor",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "2022-23",
+          "url": "/investors/2022-23.pdf"
+        },
+        {
+          "name": "2023-24",
+          "url": "/investors/2023-24.pdf"
+        },
+        {
+          "name": "2024-25",
+          "url": "/investors/2024-25.pdf"
+        }
+      ]
+    }
   ],
   "footer": [
     {

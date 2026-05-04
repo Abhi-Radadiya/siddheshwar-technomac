@@ -107,16 +107,27 @@ const Header = () => {
                         className="nav-dropdown-item hover:tracking-wider"
                         key={`children-${i}`}
                       >
-                        <Link
-                          href={child.url}
-                          className={`nav-dropdown-link block ${
-                            (pathname === `${child.url}/` ||
-                              pathname === child.url) &&
-                            "active"
-                          }`}
-                        >
-                          {child.name}
-                        </Link>
+                        {child.url.endsWith(".pdf") ? (
+                          <a
+                            href={child.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="nav-dropdown-link block"
+                          >
+                            {child.name}
+                          </a>
+                        ) : (
+                          <Link
+                            href={child.url}
+                            className={`nav-dropdown-link block ${
+                              (pathname === `${child.url}/` ||
+                                pathname === child.url) &&
+                              "active"
+                            }`}
+                          >
+                            {child.name}
+                          </Link>
+                        )}
                       </li>
                     ))}
                   </ul>
