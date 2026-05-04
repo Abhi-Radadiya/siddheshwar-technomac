@@ -11,6 +11,7 @@ import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import {
   FaRegClock,
   FaRegFolder,
@@ -36,6 +37,10 @@ export const generateStaticParams: () => { single: string }[] = () => {
 const PostSingle = ({ params }: { params: { single: string } }) => {
   const posts: Post[] = getSinglePage(blog_folder);
   const post = posts.filter((page) => page.slug === params.single)[0];
+
+  if (!post) {
+    return notFound();
+  }
 
   const { frontmatter, content } = post;
   const {

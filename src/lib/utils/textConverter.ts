@@ -3,6 +3,7 @@ import { marked } from "marked";
 
 // slugify
 export const slugify = (content: string) => {
+  if (!content) return "";
   return slug(content);
 };
 
@@ -16,6 +17,7 @@ export const markdownify = (content: string, div?: boolean) => {
 
 // humanize
 export const humanize = (content: string) => {
+  if (!content) return "";
   return content
     .replace(/^[\s_]+|[\s_]+$/g, "")
     .replace(/[_\s]+/g, " ")
@@ -35,6 +37,7 @@ export const titleify = (content: string) => {
 
 // plainify
 export const plainify = (content: string) => {
+  if (!content) return "";
   const parseMarkdown: any = marked.parse(content);
   const filterBrackets = parseMarkdown.replace(/<\/?[^>]+(>|$)/gm, "");
   const filterSpaces = filterBrackets.replace(/[\r\n]\s*[\r\n]/gm, "");
